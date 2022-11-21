@@ -23,6 +23,7 @@ class Canvas {
      * void add_figure() - добавляет определенную фигуру в вектор
      **/
 private:
+    vector<Figure*> figures = {};
     vector<MyEllipse> ellipses = {};
     vector<MyLine> lines = {};
     vector<MyRectangle> rectangles = {};
@@ -35,10 +36,7 @@ public:
     void show_figures_list();
     void print_figure_list();
 
-    void add_figure(const MyEllipse& ellipse);
-    void add_figure(const MyLine &figure);
-    void add_figure(const MyPolygon &figure);
-    void add_figure(const MyRectangle &figure);
+    void add_figure(Figure* figure);
 };
 
 

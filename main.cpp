@@ -8,9 +8,7 @@
 #include "sources/MyPolygon.h"
 
 using namespace std;
-int menu()
-{
-    cout << endl;
+int menu() {
     cout << "0. Exit" << endl;
     cout << "1. Add rectangle" << endl;
     cout << "2. Add line" << endl;
@@ -19,7 +17,7 @@ int menu()
     cout << "5. Draw figures" << endl;
     cout << "6. Information figure list" << endl;
     cout << "7. Delete figure" << endl;
-    cout << "8. Clear figure list" << endl;
+    cout << "8. Clear figure list" << endl << endl;
     int m;
     cin >> m;
     if (m < 0 || m > 8){
@@ -30,7 +28,6 @@ int menu()
 }
 
 int main() {
-
     MyRectangle rectangle = MyRectangle(0, 0, 0, 0);
     MyLine line = MyLine(0, 0, 0, 0);
     MyEllipse ellipse = MyEllipse(0, 0, 0, 0,true);
@@ -45,40 +42,56 @@ int main() {
             case 0:
                 return 0;
             case 1:
+                cout << "Creating line witch coords:" << endl;
                 rectangle = MyRectangle();
-                canv.add_figure(rectangle);
-                _getch();
+                canv.add_figure(&rectangle);
+                cout << endl;
+                system("cls");
                 break;
             case 2:
+                cout << "Creating line witch coords:" << endl;
                 line = MyLine();
-                canv.add_figure(line);
-                _getch();
+                canv.add_figure(&line);
+                cout << endl;
+                system("cls");
                 break;
             case 3:
+                cout << "Creating ellipse witch coords:" << endl;
                 ellipse = MyEllipse();
-                canv.add_figure(ellipse);
-                _getch();
+                canv.add_figure(&ellipse);
+                cout << endl;
+                system("cls");
                 break;
             case 4:
+                cout << "Creating polygon witch coords:" << endl;
                 polygon = MyPolygon();
-                canv.add_figure(polygon);
-                _getch();
+                canv.add_figure(&polygon);
+                cout << endl;
+                system("cls");
                 break;
             case 5:
                 canv.print_figure_list();
                 break;
             case 6:
+                cout << "Figures list:" << endl;
                 canv.show_figures_list();
+                cout << endl;
+                system("pause");
+                system("cls");
                 break;
             case 7:
+                cout << "Deleting figure:" << endl;
                 canv.delete_figure();
+                cout << endl;
+                system("cls");
                 break;
             case 8:
+                system("cls");
+                cout << "Figures list has cleared." << endl;
                 canv.clear_figures_list();
+                cout << endl;
                 break;
         }
-
     }
-
 }
 

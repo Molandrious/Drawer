@@ -14,7 +14,7 @@ public:
     MyPolygon(int fp_x, int fp_y, bool fill);
     MyPolygon();
     MyPolygon(int fp_x, int fp_y) : Figure (fp_x, fp_y, "MyPolygon") {}
-    const void print();
+    void print();
 };
 
 

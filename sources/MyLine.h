@@ -10,10 +10,8 @@ class MyLine : public Figure {
  */
 public:
     MyLine();
-
     MyLine(int fp_x, int fp_y, int sp_x, int sp_y);
-
-    const void print();
+    void print();
 };
 
 #endif //DRAWER_MYLINE_H

@@ -1,7 +1,7 @@
 #include "Point.h"
 
 
-const void Point::print() {
+void Point::print() {
     HWND hWnd = GetConsoleWindow();
     HDC hdc = GetDC(hWnd);
     SelectObject(hdc, GetStockObject(DC_PEN));

@@ -27,7 +27,8 @@ public:
     Figure(int first_point_x, int first_point_y, int second_point_x, int second_point_y, string figure_name);
     Figure(int first_point_x, int first_point_y, string f_name);
     explicit Figure(string f_name); //ставится перед объявлением конструктора с одним параметром и предотвращает неявное преобразование типов при инициализации
-    void show_info();
+    virtual void show_info();
+    virtual void print() {};
 };
 
 

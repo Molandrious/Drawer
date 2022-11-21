@@ -1,6 +1,6 @@
 #include "MyLine.h"
 
-const void MyLine::print() {
+ void MyLine::print() {
     HWND hWnd = GetConsoleWindow();
     HDC hdc = GetDC(hWnd);
     SelectObject(hdc, GetStockObject(DC_PEN));

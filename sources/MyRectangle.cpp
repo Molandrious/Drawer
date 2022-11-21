@@ -1,6 +1,6 @@
 #include "MyRectangle.h"
 
-const void MyRectangle::print() {
+void MyRectangle::print() {
     HWND hWnd = GetConsoleWindow();
     HDC hdc = GetDC(hWnd);
     SelectObject(hdc, GetStockObject(DC_PEN));

@@ -14,12 +14,9 @@ public:
     bool fill;
 
     MyRectangle();
-
     MyRectangle(int fp_x, int fp_y, int sp_x, int sp_y) : Figure(fp_x, fp_y, sp_x, sp_y, "Rectangle") {};
-
     MyRectangle(int fp_x, int fp_y, int sp_x, int sp_y, bool fill);
-
-    const void print();
+    void print();
 };
 
 #endif //DRAWER_MYRECTANGLE_H

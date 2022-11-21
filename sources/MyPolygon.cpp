@@ -1,6 +1,6 @@
 #include "MyPolygon.h"
 
-const void MyPolygon::print() {
+void MyPolygon::print() {
     HWND hWnd = GetConsoleWindow();
     HDC hdc = GetDC(hWnd);
     SelectObject(hdc, GetStockObject(DC_PEN));
@@ -46,6 +46,7 @@ const void MyPolygon::print() {
     LineTo(hdc, first_point_x, first_point_y );
     ReleaseDC(hWnd, hdc);
 }
+
 MyPolygon::MyPolygon(): Figure( "MyPolygon") {
     cout<<"Fill figure? (y/n)"<<endl;
     char n;
