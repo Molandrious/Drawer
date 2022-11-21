@@ -1,7 +1,3 @@
-//
-// Created by Danila on 13.11.2022.
-//
-
 #ifndef DRAWER_FIGURE_H
 #define DRAWER_FIGURE_H
 
@@ -13,17 +9,24 @@
 using namespace std;
 
 class Figure {
+    /**
+     * Базовый класс для фигур, от которого наследуются все остальные классы
+     * int first_point_x{}, first_point_y{}; - первая координата
+     * int second_point_x{}, second_point_y{}; - вторая координата
+     * string name - название фигур
+     * show_info() - выводит информацию о хранящихся фигурах
+     */
     friend class Canvas;
 
 protected:
-    int first_point_x, first_point_y;
-    int second_point_x, second_point_y;
+    int first_point_x{}, first_point_y{};
+    int second_point_x{}, second_point_y{};
     string name;
 
 public:
     Figure(int first_point_x, int first_point_y, int second_point_x, int second_point_y, string figure_name);
     Figure(int first_point_x, int first_point_y, string f_name);
-
+    explicit Figure(string f_name); //ставится перед объявлением конструктора с одним параметром и предотвращает неявное преобразование типов при инициализации
     void show_info();
 };
 

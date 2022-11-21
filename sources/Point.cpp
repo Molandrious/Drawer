@@ -1,12 +1,14 @@
-//
-// Created by Danila on 12.11.2022.
-//
-
 #include "Point.h"
 
-void Point::show_info() {
-    cout << "Point(" + to_string(x) + ", " + to_string(y) + ")" << endl;
+
+const void Point::print() {
+    HWND hWnd = GetConsoleWindow();
+    HDC hdc = GetDC(hWnd);
+    SelectObject(hdc, GetStockObject(DC_PEN));
+    SelectObject(hdc, GetStockObject(DC_BRUSH));
+
+    SetDCPenColor(hdc, RGB(255, 0, 0));
+    SetDCBrushColor(hdc, RGB(0, 255, 0));
+    LineTo(hdc, second_point_x, second_point_y);
+    SelectObject(hdc, GetStockObject(NULL_BRUSH));
 }
-
-
-
